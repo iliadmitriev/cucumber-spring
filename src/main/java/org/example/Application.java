@@ -14,7 +14,12 @@ import java.util.stream.Stream;
 public class Application {
 
     public static void main(String[] args) {
-        cucumber_run_tests(args);
+        if ( Arrays.asList(args).contains("--help") ) {
+            // display cucumber help
+            io.cucumber.core.cli.Main.main("--help");
+        } else {
+            cucumber_run_tests(args);
+        }
     }
 
     private static void cucumber_run_tests(String[] args) {
@@ -48,7 +53,7 @@ public class Application {
         } catch (CucumberException e) {
             System.out.println(e.getMessage());
             System.out.println("Didn't set glue and path to features\n" +
-                    "Try to set ```--glue org.example path/to/features``` or use ```--help```");
+                    "Try to set command line parameters ```path/to/features``` or use ```--help```");
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
