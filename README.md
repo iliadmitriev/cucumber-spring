@@ -35,3 +35,28 @@ Open report from path `allure-report`
 ```shell
 allure open allure-report
 ```
+
+### Docker
+
+#### Build docker image
+
+```shell
+docker build -f Dockerfile -t cucumber-spring ./
+```
+
+#### Run docker container
+
+Run with report mount
+```shell
+docker run -ti --rm \
+    -v $PWD/allure-report:/app/allure-report \
+    cucumber-spring
+```
+
+Run with features and report
+```shell
+docker run -ti --rm \
+    -v $PWD/src/main/resources/features:/app/features \
+    -v $PWD/allure-report:/app/allure-report \
+    cucumber-spring
+```
