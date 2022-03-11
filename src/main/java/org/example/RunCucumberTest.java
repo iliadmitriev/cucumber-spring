@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"classpath:features"},
         glue = {"org.example"},
-        plugin = {"pretty", "json:target/cucumber-report.json"}
+        plugin = {"pretty", "json:target/cucumber-report.json"},
+        stepNotifications = true,
+        tags = "@all"
 )
 public class RunCucumberTest {
     public static void main(String[] args) {

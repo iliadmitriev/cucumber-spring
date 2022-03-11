@@ -1,3 +1,4 @@
+@all
 Feature: This is dummy test scenario
   Scenario Outline: Eating
     Given There are <start> cucumbers
