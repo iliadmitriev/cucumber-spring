@@ -2,7 +2,7 @@ package org.example;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.JUnitCore;
+//import org.junit.runner.JUnitCore;
 import org.junit.runner.RunWith;
 
 
@@ -15,7 +15,9 @@ import org.junit.runner.RunWith;
         tags = "@all"
 )
 public class RunCucumberTest {
+/*
     public static void main(String[] args) {
         JUnitCore.main(RunCucumberTest.class.getName());
     }
+*/
 }
