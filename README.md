@@ -57,6 +57,7 @@ Run with features and report
 ```shell
 docker run -ti --rm \
     -v $PWD/src/main/resources/features:/app/features \
+    -v $PWD/allure-results:/app/allure-results \
     -v $PWD/allure-report:/app/allure-report \
     cucumber-spring
 ```
